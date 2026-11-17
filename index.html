@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krishi Saathi — widget demo</title>
+<style>
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f5f1e7;color:#1d2a20}
+main{max-width:720px;margin:0 auto;padding:48px 20px}
+h1{margin-top:0}code,pre{background:#fffdf8;border:1px solid #e2dac8;border-radius:8px}
+pre{padding:14px;overflow:auto}code{padding:1px 6px}
+a{color:#2f6b3f}
+</style>
+</head>
+<body>
+<main>
+  <h1>Krishi Saathi is running 🌱</h1>
+  <p>This is a demo page for the chat widget. Click the green chat button in the corner to try it.</p>
+  <h3>Add it to your website</h3>
+  <p>Paste this one line just before <code>&lt;/body&gt;</code> on any page:</p>
+  <pre id="snippet"></pre>
+  <p>Optional settings: <code>data-language="ta"</code> to default to Tamil, <code>data-color="#2f6b3f"</code>, <code>data-position="left"</code>, <code>data-title="…"</code>.</p>
+  <p>Manage the knowledge base and see insights at <a href="/admin">/admin</a>.</p>
+</main>
+<script>
+document.getElementById('snippet').textContent = '<script src="' + location.origin + '/widget.js" defer><\/script>';
+</script>
+<script src="/widget.js" defer></script>
+</body>
+</html>

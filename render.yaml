@@ -1,0 +1,32 @@
+# Render Blueprint — New → Blueprint → pick this repository.
+services:
+  - type: web
+    name: krishi-saathi-backend
+    runtime: node
+    rootDir: backend
+    region: singapore          # closest Render region to India
+    plan: free                 # change to a paid plan before real farmers use it (free sleeps when idle)
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: CLAUDE_MODEL
+        value: claude-sonnet-5-5
+      - key: CLAUDE_FAST_MODEL
+        value: claude-haiku-5-5
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SARVAM_API_KEY
+        sync: false
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      - key: BOT_NAME
+        value: Krishi Saathi
+      - key: NODE_VERSION
+        value: "22"
